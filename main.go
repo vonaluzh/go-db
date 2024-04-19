@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"goDb/connection"
 	"sort"
 	"strconv"
 	"strings"
@@ -121,6 +122,8 @@ func main() {
 	var rootNode = node.getRoot()
 
 	draw(rootNode, 0)
+
+	connection.UpServer()
 }
 
 func draw(node *Node, level int) {
